@@ -1,4 +1,3 @@
-# SocEntPopularitySPI
 # Popularity metrics’ normalization for social media entities
 ===========
 
