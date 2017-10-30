@@ -1,5 +1,7 @@
 package com.popularity.media.provider;
 
+import java.util.List;
+
 import com.popularity.media.feedback.MediaUserFeedBackMetrics;
 import com.popularity.media.metadata.MediaMetadataMetrics;
 import com.popularity.search.TwitterTextSearch;
@@ -37,15 +39,16 @@ public class TwitterTextPopularity implements MediaPopularity {
 	}
 
 	@Override
-	public boolean defineMediaPopularityMetadataMetrics() {
+	public MediaMetadataMetrics defineMediaPopularityMetadataMetrics(List <Attribute>  metadata_Attributes) {
 		// TODO Auto-generated method stub
-		return false;
+		return null;
 	}
 
 	@Override
-	public boolean defineMediaPopularityUsertFeedBackMetrics() {
+	public MediaUserFeedBackMetrics  defineMediaPopularityUserFeedBackMetrics(
+			List <Attribute>  feedBack_Attributes) {
 		// TODO Auto-generated method stub
-		return false;
+		return null;
 	}
 
 	

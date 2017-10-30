@@ -1,6 +1,9 @@
 package com.popularity.media.metadata;
 
 import java.util.Date;
+import java.util.List;
+
+import com.popularity.media.provider.Attribute;
 
 
 public class MediaMetadataMetrics {
@@ -8,10 +11,10 @@ public class MediaMetadataMetrics {
 	private String id;
 	private String url;
 	private Date createdAt;
+	private List<Attribute> newAttributes;
 	
 
-
-
+	
 	public MediaMetadataMetrics(String id, String url, Date createdAt) {
 		super();
 		this.id = id;
@@ -28,6 +31,10 @@ public class MediaMetadataMetrics {
 
 
 
+	public MediaMetadataMetrics(List<Attribute> newAttributes) {
+		super();
+		this.newAttributes = newAttributes;
+	}
 
 	public String getId() {
 		return id;
@@ -62,8 +69,14 @@ public class MediaMetadataMetrics {
 	public void setCreatedAt(Date createdAt) {
 		this.createdAt = createdAt;
 	}
+	public List<Attribute> getNewAttributes() {
+		return newAttributes;
+	}
 
-	@Override
+	public void setNewAttributes(List<Attribute> newAttributes) {
+		this.newAttributes = newAttributes;
+	}
+
 	public String toString() {
 		return "MediaMetadataMetrics [id=" + id + ", url=" + url
 				+ ", createdAt=" + createdAt + "]";

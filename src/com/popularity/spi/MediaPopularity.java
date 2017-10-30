@@ -1,7 +1,10 @@
 package com.popularity.spi;
 
+import java.util.List;
+
 import com.popularity.media.feedback.MediaUserFeedBackMetrics;
 import com.popularity.media.metadata.MediaMetadataMetrics;
+import com.popularity.media.provider.Attribute;
 import com.popularity.user.metrcis.UserPopularityMetrics;
 
 public interface MediaPopularity {
@@ -18,8 +21,11 @@ public interface MediaPopularity {
 	public UserPopularityMetrics getAuthorPopularity (String id_media);
 	
 	//service to  add media popularity metadata 
-	public boolean defineMediaPopularityMetadataMetrics ();
+	//provide extensibility
+	public MediaMetadataMetrics defineMediaPopularityMetadataMetrics (List <Attribute> metadata_Attributes);
+	
 	
 	//service to  add the media is user popularity metadata 
-	public boolean defineMediaPopularityUsertFeedBackMetrics ();
+	//provide extensibility
+	public MediaUserFeedBackMetrics  defineMediaPopularityUserFeedBackMetrics (List <Attribute>  feedBack_Attributes);
 }
